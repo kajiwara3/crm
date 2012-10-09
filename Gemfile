@@ -36,14 +36,14 @@ group :test, :development do
     # gem 'therubyracer'
 
     gem 'uglifier', '>= 1.0.3'
+    gem 'less'
   end
 
   gem 'jquery-rails'
-
   # To use ActiveModel has_secure_password
   gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
-
   gem 'factory_girl_rails', '~> 1.4.0'
+  gem 'twitter-bootstrap-rails'
 end
 
 ################################################
