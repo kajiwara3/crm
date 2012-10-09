@@ -1,0 +1,6 @@
+<% @administrators.each do |admin| %>
+<ul>
+  <li><%= admin.name %></li>
+</ul>
+<% end %>
+<%= will_paginate @members %>
