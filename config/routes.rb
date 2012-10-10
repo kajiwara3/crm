@@ -59,5 +59,7 @@ Tw::Application.routes.draw do
 
   namespace :admin do
     resources :administrators
+    # session controller
+    resource session, only: [:cleate, :destroy]
   end
 end

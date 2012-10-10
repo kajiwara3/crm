@@ -10,4 +10,15 @@ class Administrator < ActiveRecord::Base
     @password = val
   end
 
+  class << self
+    def authenticate(email, password)
+      administrator = find_by_email(email)
+      if administrator && administrator.hashed_password.present? &&
+        BCript::Password.new(administrator.hashed_password) == password
+        administrator
+      else
+        nil
+      end
+    end
+  end
 end
