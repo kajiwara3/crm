@@ -58,8 +58,10 @@ Tw::Application.routes.draw do
   root to: "top#index"
 
   namespace :admin do
+    root to: "top#index"
+
     resources :administrators
     # session controller
-    resource session, only: [:cleate, :destroy]
+    resource :session, only: [:cleate, :destroy]
   end
 end

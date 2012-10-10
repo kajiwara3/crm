@@ -1,6 +1,6 @@
 # coding: utf-8
 class Admin::Base < ApplicationController
-  before_fliter :admin_authorize
+  before_filter :admin_authorize
   before_filter :admin_login_required
 
   private
@@ -12,6 +12,6 @@ class Admin::Base < ApplicationController
   end
 
   def admin_login_required
-    raise Forbidden unless @current_admin.try(:administrator?)
+    redirect_to :admin_root unless @current_admin.try(:administrator?)
   end
 end
