@@ -1,5 +1,7 @@
 # coding: utf-8
 class Admin::Base < ApplicationController
+  layout "admin_application"
+
   before_filter :admin_authorize
   before_filter :admin_login_required
 
@@ -12,6 +14,6 @@ class Admin::Base < ApplicationController
   end
 
   def admin_login_required
-    redirect_to :admin_root unless @current_admin.try(:administrator?)
+    redirect_to :admin_root unless @current_admin
   end
 end

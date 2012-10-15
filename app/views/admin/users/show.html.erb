@@ -1,0 +1,14 @@
+<%= link_to "一覧に戻る", :admin_users %>| <%= link_to "編集する", [:edit, :admin, @user] %>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>name</th>
+      <td><%= @user.name%></td>
+    </tr>
+    <tr>
+      <th>address</th>
+      <td><%= @user.address %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to "削除する", [:admin, @user], method: :delete, confirm: "削除しますか？" %>

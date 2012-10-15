@@ -1,0 +1,23 @@
+<%= form_for [:admin, @user] do |f| %>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>
+        <%= f.label :name %>
+      </th>
+      <td>
+        <%= f.text_field :name %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <%= f.label :address %>
+      </th>
+      <td>
+        <%= f.text_field :address %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<%= f.submit class: "btn" %>
+<% end %>
