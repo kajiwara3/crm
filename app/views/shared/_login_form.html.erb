@@ -1,0 +1,22 @@
+<%= form_tag :admin_session do %>
+  <div class="content-group">
+    <label class="control-label" for="email">email</label>
+    <div class="controls">
+      <%= text_field_tag "email" %>
+    </div>
+  </div>
+
+  <div class="content-group">
+    <label class="control-label" for="password">password</label>
+    <div class="controls">
+      <%= password_field_tag "password" %>
+    </div>
+  </div>
+
+  <div class="content-group">
+    <div class="controls">
+      <%= submit_tag "login", {class: "btn"} %>
+    </div>
+  </div>
+  <%= hidden_field_tag "from", request.path %>
+<% end %>

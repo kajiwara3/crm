@@ -1,26 +1,6 @@
 <h2>ログイン</h2>
-<% if flash.alert %>
-  <%= flash.alert %>
-<% end %>
-<%= form_tag :admin_session do %>
-  <div class="content-group">
-    <label class="control-label" for="email">email</label>
-    <div class="controls">
-      <%= text_field_tag "email" %>
-    </div>
-  </div>
-
-  <div class="content-group">
-    <label class="control-label" for="password">password</label>
-    <div class="controls">
-      <%= password_field_tag "password" %>
-    </div>
-  </div>
-
-  <div class="content-group">
-    <div class="controls">
-      <%= submit_tag "login" %>
-    </div>
-  </div>
-  <%= hidden_field_tag "from", request.path %>
+<% if @current_admin %>
+  <%= link_to "logout", :admin_session, method: :delete, confirm: "ログアウトしますか？" %>
+<% else %>
+  <%= render "shared/login_form" %>
 <% end %>

@@ -62,6 +62,7 @@ Tw::Application.routes.draw do
 
     resources :administrators
     # session controller
-    resource :session, only: [:cleate, :destroy]
+    # resource :session, only: [:cleate, :destroy]
+    resource :session, only: [:create, :destroy]
   end
 end
