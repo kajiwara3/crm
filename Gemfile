@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
+################################################
+# テスト環境用
+################################################
+group :test do
+  gem 'spork'
+end
 
 ################################################
 # テスト・開発環境用
@@ -42,11 +48,20 @@ group :test, :development do
   gem 'jquery-rails'
   # To use ActiveModel has_secure_password
   gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
-  gem 'factory_girl_rails', '~> 1.4.0'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass-rails'
   gem 'will_paginate', '~> 3.0'
   gem 'i18n_generators'
+  gem 'simple_form'
+
+  # Test
+  gem 'factory_girl_rails', '~> 1.4.0'
+  gem 'rspec-rails'
+  gem 'ruby_gntp'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'rb-fsevent', :require => false
 end
 
 ################################################

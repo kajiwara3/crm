@@ -18,8 +18,9 @@ class Admin::UsersController < Admin::Base
     @user.assign_attributes(params[:user])
 
     if @user.save
-      return redirect_to [:admin, @user], notice: "ユーザー情報を更新しました"
+      redirect_to [:admin, @user], notice: "ユーザー情報を更新しました"
+    else
+      render "edit"
     end
-    render "edit"
   end
 end

@@ -9,7 +9,7 @@ ja:
     - 金
     - 土
     abbr_month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月
@@ -35,7 +35,7 @@ ja:
       long: ! '%Y年%m月%d日(%a)'
       short: ! '%m/%d'
     month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月
@@ -99,9 +99,9 @@ ja:
     format: ! '%{attribute}%{message}'
     messages:
       accepted: を受諾してください。
-      blank: を入力してください。
+      blank: 入力してください。
       confirmation: と確認の入力が一致しません。
-      empty: を入力してください。
+      empty: 入力してください。
       equal_to: は%{count}にしてください。
       even: は偶数にしてください。
       exclusion: は予約されています。
