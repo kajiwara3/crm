@@ -56,6 +56,7 @@ group :test, :development do
 
   # Test
   gem 'factory_girl_rails', '~> 1.4.0'
+  gem 'rails3-generators'
   gem 'rspec-rails'
   gem 'ruby_gntp'
   gem 'guard'

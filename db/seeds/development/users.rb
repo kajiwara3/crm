@@ -9,8 +9,8 @@ gnames_kana = ["タロウ", "ジロウ", "ハナコ"]
     name: "#{fnames[idx % 4]} #{gnames[idx % 3]}",
     name_kana: "#{fnames_kana[idx % 4]} #{gnames_kana[idx % 3]}",
     address: "山形県 ナンジャス #{idx}",
-#    email: "test#{idx}@a.com",
-#    password: "password",
-#    password_confirmation: "password"
+    email: "test#{idx}@a.com",
+    password: "password",
+    password_confirmation: "password"
   )
 end
