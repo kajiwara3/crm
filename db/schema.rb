@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20121017125253) do
     t.integer  "mail_magazine_id",                   :null => false
     t.string   "name"
     t.text     "email"
-    t.date     "send_date"
+    t.datetime "sent_at"
     t.boolean  "validity",         :default => true
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(:version => 20121017125253) do
   create_table "mail_magazines", :force => true do |t|
     t.string   "subject"
     t.string   "body"
-    t.date     "reserved_date"
-    t.date     "send_date"
-    t.date     "canceled_date"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "reserved_at"
+    t.datetime "sent_at"
+    t.datetime "canceled_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

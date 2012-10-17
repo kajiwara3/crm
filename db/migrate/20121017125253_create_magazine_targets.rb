@@ -4,7 +4,7 @@ class CreateMagazineTargets < ActiveRecord::Migration
       t.references :mail_magazine, null: false
       t.string :name
       t.text :email
-      t.date :send_date
+      t.datetime :sent_at
       t.boolean :validity, default: true
 
       t.timestamps

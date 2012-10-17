@@ -3,9 +3,9 @@ class CreateMailMagazines < ActiveRecord::Migration
     create_table :mail_magazines do |t|
       t.string :subject
       t.string :body
-      t.date :reserved_date
-      t.date :send_date
-      t.date :canceled_date
+      t.datetime :reserved_at
+      t.datetime :sent_at
+      t.datetime :canceled_at
 
       t.timestamps
     end
