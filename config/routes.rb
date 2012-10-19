@@ -1,7 +1,11 @@
 Tw::Application.routes.draw do
   root to: "top#index"
   devise_for :users
-  resource :user
+  resource :users
+
+  resources :mail_magazines do
+    resources :magazine_targets
+  end
 
   namespace :admin do
     root to: "top#index"

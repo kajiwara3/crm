@@ -1,0 +1,17 @@
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>title</th>
+        <th>reserved_at</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @mail_magazine_list.each do |magazine| %>
+        <tr>
+          <td><%= link_to(magazine.subject, [magazine, :magazine_targets]) %></td>
+          <td><%= magazine.reserved_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<%= will_paginate @mail_magazine_list %>

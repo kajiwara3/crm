@@ -1,0 +1,2 @@
+module MailMagazinesHelper
+end
