@@ -49,10 +49,11 @@ group :test, :development do
   # To use ActiveModel has_secure_password
   gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
   gem 'twitter-bootstrap-rails'
-  gem 'bootstrap-sass-rails'
+  #gem 'bootstrap-sass-rails'
   gem 'will_paginate', '~> 3.0'
   gem 'i18n_generators'
   gem 'simple_form'
+  gem 'kaminari'
 
   # Test
   gem 'factory_girl_rails', '~> 1.4.0'

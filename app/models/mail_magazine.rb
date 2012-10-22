@@ -5,4 +5,5 @@ class MailMagazine < ActiveRecord::Base
   accepts_nested_attributes_for :magazine_targets, allow_destroy: true
 
   validates :subject, :body, :reserved_at, presence: true
+  paginates_per 5
 end

@@ -32,6 +32,10 @@ ja:
         one: Displaying <b>1</b> %{model}
         other: Displaying <b>all %{count}</b> %{model}
         zero: No %{model} found
-
-    page_gap: ! '…'
-    previous_label: ! '← Prev'
+  views:
+    pagination:
+      first: "«"
+      last: "»"
+      previous: "‹ 前"
+      next: "次 ›"
+      truncate: "..."

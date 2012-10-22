@@ -4,8 +4,8 @@ FactoryGirl.define do
   factory :mail_magazine do
     subject "MyString"
     body "MyString"
-    reserved_date "2012-10-17"
-    send_date "2012-10-17"
-    canceled_date "2012-10-17"
+    reserved_at "2012-10-17"
+    sent_at "2012-10-17"
+    canceled_at "2012-10-17"
   end
 end

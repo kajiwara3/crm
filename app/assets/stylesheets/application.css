@@ -11,9 +11,6 @@
  *= require_self
  *= require_tree .
 */
-/*
- *= require twitter/bootstrap
- */
 
 span.previous_page.disabled,
 em.current {
