@@ -54,7 +54,8 @@ group :test, :development do
   gem 'i18n_generators'
   gem 'simple_form'
   gem 'kaminari'
-
+  gem "jquery_datepicker"
+  gem "jquery-ui-themes"
   # Test
   gem 'factory_girl_rails', '~> 1.4.0'
   gem 'rails3-generators'

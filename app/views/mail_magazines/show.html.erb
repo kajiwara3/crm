@@ -1,0 +1,16 @@
+<%= link_to "編集する", :edit_mail_magazine %>
+<table class="table">
+  <tr>
+    <th><%= MailMagazine.human_attribute_name "subject" %></th>
+    <td><%= @mail_magazine.subject %></td>
+  </tr>
+  <tr>
+    <th><%= MailMagazine.human_attribute_name "body" %></th>
+    <td><%= simple_format @mail_magazine.body %></td>
+  </tr>
+  <tr>
+    <th><%= MailMagazine.human_attribute_name "reserved_at" %></th>
+    <td><%= @mail_magazine.reserved_at %></td>
+  </tr>
+</table>
+
