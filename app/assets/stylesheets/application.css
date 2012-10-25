@@ -54,3 +54,7 @@ em.current {
 .wide-text-area {
   width: 550px;
 }
+
+.datetime {
+  widh: 50px;
+}

@@ -3,19 +3,21 @@ ja:
     models:
       administrator: 管理者  #g
       user: ユーザー
-
+      mail_magazine: メールマガジン
     attributes:
       administrator:
         deleted_at: deleted_at  #g
         email: メールアドレス  #g
         hashed_password: 暗号化済みパスワード
         name: 名前  #g
-
       user:
         name: 名前
         address: 住所
         name_kana: name_kana  #g
-
+      mail_magazine:
+        subject: 題名
+        body: 本文
+        reserved_at: 配信日時
   will_paginate:
     next_label: Next →
     page_entries_info:
