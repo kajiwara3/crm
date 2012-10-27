@@ -5,7 +5,7 @@ class CreateMagazineTargets < ActiveRecord::Migration
       t.string :name
       t.text :email
       t.datetime :sent_at
-      t.boolean :validity, default: true
+      t.boolean :enabled_target, default: true
 
       t.timestamps
     end

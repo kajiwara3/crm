@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20121017125253) do
     t.string   "name"
     t.text     "email"
     t.datetime "sent_at"
-    t.boolean  "validity",         :default => true
+    t.boolean  "enabled_target",   :default => true
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
   end
