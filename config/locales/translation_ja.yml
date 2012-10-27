@@ -4,6 +4,7 @@ ja:
       administrator: 管理者  #g
       user: ユーザー
       mail_magazine: メールマガジン
+      magazine_target: メールマガジン配信先
     attributes:
       administrator:
         deleted_at: deleted_at  #g
@@ -18,6 +19,12 @@ ja:
         subject: 題名
         body: 本文
         reserved_at: 配信日時
+      magazine_target:
+        mail_magazine_id: メールマガジン
+        name: 宛先名
+        email: メールアドレス
+        sent_at: 配信日時
+        enabled_target: 宛先有効
   will_paginate:
     next_label: Next →
     page_entries_info:
