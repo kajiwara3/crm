@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20121017125253) do
 
   create_table "mail_magazines", :force => true do |t|
     t.string   "subject"
-    t.string   "body"
+    t.text     "body"
     t.datetime "reserved_at"
     t.datetime "sent_at"
     t.datetime "canceled_at"
