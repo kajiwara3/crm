@@ -1,17 +1,17 @@
-  <table class="table table-hover table-striped">
-    <thead>
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th><%= MailMagazine.human_attribute_name "subject" %></th>
+      <th><%= MailMagazine.human_attribute_name "reserved_at" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @mail_magazine_list.each do |magazine| %>
       <tr>
-        <th><%= MailMagazine.human_attribute_name "subject" %></th>
-        <th><%= MailMagazine.human_attribute_name "reserved_at" %></th>
+        <td><%= link_to magazine.subject, magazine %></td>
+        <td><%= l magazine.reserved_at, format: :default %></td>
       </tr>
-    </thead>
-    <tbody>
-      <% @mail_magazine_list.each do |magazine| %>
-        <tr>
-          <td><%= link_to magazine.subject, magazine %></td>
-          <td><%= l magazine.reserved_at, format: :default %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <% end %>
+  </tbody>
+</table>
 <%= paginate @mail_magazine_list %>
