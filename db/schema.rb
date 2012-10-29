@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20121017125253) do
   create_table "magazine_targets", :force => true do |t|
     t.integer  "mail_magazine_id",                   :null => false
     t.string   "name"
-    t.text     "email"
+    t.string   "email"
     t.datetime "sent_at"
     t.boolean  "enabled_target",   :default => true
     t.datetime "created_at",                         :null => false

@@ -1,0 +1,4 @@
+<%= simple_form_for([@magazine, @magazine_target], html: {class: "form-holizonal"}) do |form| %>
+  <%= render "form", form: form %>
+  <%= form.button :submit %>
+<% end %>
