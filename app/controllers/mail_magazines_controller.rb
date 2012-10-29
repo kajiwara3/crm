@@ -23,4 +23,17 @@ class MailMagazinesController < ApplicationController
     end
     render "edit"
   end
+
+  def new
+    @mail_magazine = MailMagazine.new
+  end
+
+  def create
+    @mail_magazine = MailMagazine.new
+    @mail_magazine.assign_attributes(params[:mail_magazine])
+    if @mail_magazine.save
+      return redirect_to @mail_magazine, notice: "保存しました"
+    end
+    render "new"
+  end
 end
