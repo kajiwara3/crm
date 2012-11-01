@@ -4,6 +4,9 @@ Tw::Application.routes.draw do
   resource :users
 
   resources :mail_magazines do
+    member do
+      get "test_sending"
+    end
     resources :magazine_targets
   end
 
