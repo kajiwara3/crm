@@ -1,3 +1,10 @@
+<%= form_tag({action: "test_sending"}, {method: :get}) do %>
+  email:<%= text_field_tag "target" %><br />
+  <%= hidden_field_tag "id", value = @mail_magazine.id %>
+  <%= submit_tag 'テスト送信' %>
+<% end %>
+<hr />
+
 <%= link_to "一覧に戻る", :mail_magazines %> | <%= link_to "編集する", :edit_mail_magazine %> | <%= link_to "宛先管理", [@mail_magazine, :magazine_targets] %>
 <table class="table">
   <tr>
@@ -13,4 +20,3 @@
     <td><%= simple_format @mail_magazine.body %></td>
   </tr>
 </table>
-

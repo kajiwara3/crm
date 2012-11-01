@@ -36,4 +36,13 @@ class MailMagazinesController < ApplicationController
     end
     render "new"
   end
+
+  def test_sending
+    @target = params[:target]
+    if @target
+      @mail_magazine = MailMagazine.find(params[:id])
+      MagazineMailer.magazine_sending(@mail_magazine, @target).deliver
+      redirect_to @mail_magazine, notice: "送信しました"
+    end
+  end
 end
