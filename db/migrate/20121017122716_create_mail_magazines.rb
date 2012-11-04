@@ -1,6 +1,7 @@
 class CreateMailMagazines < ActiveRecord::Migration
   def change
     create_table :mail_magazines do |t|
+      t.references :user, null: false
       t.string :subject
       t.text :body
       t.datetime :reserved_at
