@@ -15,6 +15,8 @@ class MagazineMailer < ActionMailer::Base
 
   def magazine_sending(mail_magazine, target)
     @mail_magazine = mail_magazine
-    mail subject: @mail_magazine.subject, to: target
+    mail subject: @mail_magazine.subject,
+                  to: target,
+                  from: Tw::Application.config.administrator_email_address
   end
 end
