@@ -5,7 +5,8 @@ Tw::Application.routes.draw do
 
   resources :mail_magazines do
     member do
-      get "test_sending"
+      get "test_sending", "target_csv_upload_form"
+      post "target_csv_upload"
     end
     resources :magazine_targets
   end

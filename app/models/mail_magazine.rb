@@ -1,6 +1,7 @@
 # coding: utf-8
 class MailMagazine < ActiveRecord::Base
   has_many :magazine_targets, dependent: :destroy
+  belongs_to :users
   attr_accessible :user_id, :subject, :body, :reserved_at, :sent_at, :canceled_at
   accepts_nested_attributes_for :magazine_targets, allow_destroy: true
 

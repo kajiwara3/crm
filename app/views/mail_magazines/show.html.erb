@@ -4,8 +4,11 @@
   <%= submit_tag 'テスト送信' %>
 <% end %>
 <hr />
-
-<%= link_to "一覧に戻る", :mail_magazines %> | <%= link_to "編集する", :edit_mail_magazine %> | <%= link_to "宛先管理", [@mail_magazine, :magazine_targets] %>
+<%= link_to "宛先一覧", [@mail_magazine, :magazine_targets] %> |
+<%= link_to "宛先を一件ずつ追加", [:new, @mail_magazine, :magazine_target] %> |
+<%= link_to "宛先をCSVで追加", [:target_csv_upload_form, @mail_magazine] %>
+<br />
+<%= link_to "一覧に戻る", :mail_magazines %> | <%= link_to "編集する", :edit_mail_magazine %>
 <table class="table">
   <tr>
     <th><%= MailMagazine.human_attribute_name "subject" %></th>

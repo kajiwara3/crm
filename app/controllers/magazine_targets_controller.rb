@@ -22,4 +22,7 @@ class MagazineTargetsController < ApplicationController
     end
     render "new"
   end
+
+  def csv_upload_form
+  end
 end

@@ -1,0 +1,14 @@
+<%= form_tag({controller: "mail_magazines", action: "target_csv_upload"},
+    {multipart: true, class: "form-inline"}) do %>
+  <div class="control-group">
+    <label class="control-label">
+      ファイルを選択してください
+    </label>
+    <div class="controls">
+      <%= file_field_tag 'target_list' %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= submit_tag "アップロード" %>
+  </div>
+<% end %>

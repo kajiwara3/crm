@@ -1,4 +1,4 @@
-<%= link_to "一覧に戻る", [@magazine, :magazine_targets] %>
+<%= link_to "戻る", @magazine %>
 <%= simple_form_for([@magazine, @magazine_target], html: {class: "form-holizonal"}) do |form| %>
   <%= render "form", form: form %>
   <%= form.button :submit %>
