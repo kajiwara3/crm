@@ -1,6 +1,6 @@
 class Admin::AdministratorsController < Admin::Base
   def index
-    @administrators = Administrator.order(:id).
-      paginate(page: params[:page], per_page: 5)
+    @administrators = Kaminari.paginate_array(Administrator.order(:id)).
+      page(params[:page]).per(5)
   end
 end
