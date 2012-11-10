@@ -19,25 +19,4 @@ class MailMagazine < ActiveRecord::Base
     self.complete_sending_at = Time.now
     self.save
   end
-
-  def validate_posted_data
-    self.subject_presence?
-    self.body_presence?
-  end
-
-  def subject_presence?
-    if self.subject.empty?
-      errors.add(:subject, "入力してください")
-      return false
-    end
-    return true
-  end
-
-  def body_presence?
-    if self.body.empty?
-      errors.add(:body, "入力してください")
-      return false
-    end
-    return true
-  end
 end

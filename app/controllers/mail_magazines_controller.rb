@@ -31,7 +31,6 @@ class MailMagazinesController < ApplicationController
   def create
     @mail_magazine = MailMagazine.new
     @mail_magazine.assign_attributes(params[:mail_magazine])
-    @mail_magazine.validate_posted_data
     if @mail_magazine.invalid?
       return render "new"
     end
