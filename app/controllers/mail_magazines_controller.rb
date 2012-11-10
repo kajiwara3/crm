@@ -31,10 +31,19 @@ class MailMagazinesController < ApplicationController
   def create
     @mail_magazine = MailMagazine.new
     @mail_magazine.assign_attributes(params[:mail_magazine])
-    if @mail_magazine.save
+    @mail_magazine.validate_posted_data
+    if @mail_magazine.invalid?
+      return render "new"
+    end
+
+    begin
+    current_user.mail_magazines << @mail_magazine
+    rescue => e
+      flash[:error] = "error!! #{e.message}"
+      return render "new"
+    else
       return redirect_to @mail_magazine, notice: "保存しました"
     end
-    render "new"
   end
 
   def test_sending
