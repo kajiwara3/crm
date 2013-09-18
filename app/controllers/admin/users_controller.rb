@@ -6,11 +6,11 @@ class Admin::UsersController < Admin::Base
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find params[:id]
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.find params[:id]
   end
 
   def update
