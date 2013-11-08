@@ -1,5 +1,5 @@
 # coding: utf-8
-fnames = ["ic-佐藤", "ic-鈴木", "ic-高橋", "ic-田中"]
+fnames = ["佐藤", "鈴木", "高橋", "田中"]
 gnames = ["太郎", "次郎", "花子　"]
 
 0.upto(9) do |idx|
