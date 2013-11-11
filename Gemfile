@@ -64,19 +64,30 @@ end
 ################################################
 group :test, :development do
   gem 'rails3-generators'
+end
+
+################################################
+# 開発環境用
+################################################
+group :development do
+  gem 'capistrano'
   gem 'rvm-capistrano'
+  gem 'capistrano-unicorn', :require => false
+  gem 'net-ssh'
 end
 
 ################################################
 # リハーサル環境用
 ################################################
 group :staging do
+  gem 'unicorn'
 end
 
 ################################################
 # 本番環境用
 ################################################
 group :production do
+  gem 'unicorn'
 end
 
 # To use ActiveModel has_secure_password
