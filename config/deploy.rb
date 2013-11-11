@@ -1,4 +1,6 @@
 # -*-coding: utf-8-*-
+require 'bundler/capistrano'
+
 # multistage setting
 require 'capistrano/ext/multistage'
 
@@ -16,7 +18,7 @@ require "rvm/capistrano"
 set :rvm_ruby_strig, "1.9.3"
 
 # ssh settings
-set :use_sudo, true
+set :use_sudo, sudo
 set :default_run_options, :pty => true
 ssh_options[:forward_agent] = true
 set :normalize_asset_timestamps, false

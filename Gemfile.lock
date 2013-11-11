@@ -290,6 +290,7 @@ DEPENDENCIES
   rails (= 3.2.13)
   rails-i18n
   rails3-generators
+  rake (= 10.1.0)
   rb-fsevent
   rspec-rails
   ruby_gntp
