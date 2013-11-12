@@ -3,7 +3,7 @@
 worker_processes 1
 
 # RAILS ROOT
-working_directory ENV['APP_ROOT']
+working_directory '/var/www/current'
 
 # ソケット経由で通信する
 listen File.expand_path('tmp/sockets/unicorn.sock', ENV['RAILS_ROOT'])
