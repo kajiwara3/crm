@@ -41,9 +41,9 @@ Tw::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.serve_static_assets = false
+  config.serve_static_assets = true
   config.assets.compress = true
-  config.assets.compile = false
+  config.assets.compile = true
   config.assets.digest = true
   config.whiny_nils = true
 end
