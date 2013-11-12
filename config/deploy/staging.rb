@@ -9,7 +9,7 @@ set :rvm_lib_path, "#{rvm_path}/lib"
 set :user, 'ec2-user'
 
 # デプロイ先のディレクトリ設定
-set :deploy_to, "/var/www/current"
+set :deploy_to, "/var/www"
 # デプロイ環境名
 set :rails_env, "staging"
 # server "54.238.159.246", :app, :web, :db, primary: true

@@ -23,7 +23,7 @@ Tw::Application.configure do
     :domain             => 'locaohost.localdomain',
     :authentication     => :plain,
   }
-  config.administrator_email_address = 'kajiwara3@gmail.com'
+  config.administrator_email_address = 'hoge@gmail.com'
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }

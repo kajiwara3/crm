@@ -18,7 +18,7 @@ require "rvm/capistrano"
 set :rvm_ruby_strig, "1.9.3"
 
 # ssh settings
-set :use_sudo, sudo
+set :use_sudo, true
 set :default_run_options, :pty => true
 ssh_options[:forward_agent] = true
 set :normalize_asset_timestamps, false
