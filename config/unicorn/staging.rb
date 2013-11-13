@@ -6,7 +6,7 @@ worker_processes 1
 working_directory '/var/www/current'
 
 # ソケット経由で通信する
-listen File.expand_path('tmp/sockets/unicorn.sock', ENV['RAILS_ROOT'])
+listen '/tmp/unicorn.sock'
 pid File.expand_path('tmp/pids/unicorn.pid', ENV['RAILS_ROOT'])
 
 # ログ
