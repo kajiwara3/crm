@@ -18,7 +18,7 @@ require "rvm/capistrano"
 set :rvm_ruby_strig, "1.9.3"
 
 # ssh settings
-set :use_sudo, true
+set :use_sudo, false
 set :default_run_options, :pty => true
 ssh_options[:forward_agent] = true
 set :normalize_asset_timestamps, false
@@ -38,6 +38,28 @@ namespace :deploy do
       run "cd #{current_path}; rake db:create RAILS_ENV=#{rails_env}"
       system "cap deploy:set_permissions"
     end
+
+    desc "Migrate Database"
+    task :migrate, {:roles => :db, :only => {:primary => true}} do
+      run "cd #{current_path} && bundle exec rake db:migrate RAILS_ENV=#{rails_env}"
+    end
+
+    desc "Drop Database"
+    task :drop, {:roles => :db, :only => {:primary => true}} do
+      run "cd #{current_path} && bundle exec rake db:drop RAILS_ENV=#{rails_env}"
+    end
+
+    task :init, {:roles => :db, :only => {:primary => true}} do
+      tasks = %w(deploy:update_code
+                 deploy:db:drop
+                 deploy:db:create
+                 deploy:migrate
+                 deploy:db:seed)
+
+      agree = Capistrano::CLI.ui.agree("deploy:db:init will DROP your database. Are you sure? (Yes, No)") do |q|
+        q.default = 'No'
+      end
+    end
   end
 end
 
@@ -48,3 +70,8 @@ end
 
 after 'deploy:restart', 'unicorn:restart'
 after "deploy:update_code", :bundle_install
+
+
+#require 'capistrano/unicorn'
+#after 'deploy:start', 'unicorn:start'
+#after 'deploy:stop', 'unicorn:stop'

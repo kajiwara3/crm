@@ -74,7 +74,7 @@ group :development do
   gem 'capistrano'
   gem 'capistrano_colors'
   gem 'rvm-capistrano'
-  gem 'capistrano-unicorn', :require => false
+  gem 'capistrano-unicorn'
   gem 'net-ssh'
 end
 

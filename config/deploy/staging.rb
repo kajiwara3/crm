@@ -7,6 +7,7 @@ set :rvm_lib_path, "#{rvm_path}/lib"
 
 #SSHユーザーの設定
 set :user, 'ec2-user'
+set :use_sudo, true
 
 # デプロイ先のディレクトリ設定
 set :deploy_to, "/var/www"
