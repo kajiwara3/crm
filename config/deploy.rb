@@ -49,6 +49,11 @@ namespace :deploy do
       run "cd #{current_path} && bundle exec rake db:migrate RAILS_ENV=#{rails_env}"
     end
 
+    desc "Seed Database"
+    task :seed, {:roles => :db, :only => {:primary => true}} do
+      run "cd #{current_path} && bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+    end
+
     desc "Drop Database"
     task :drop, {:roles => :db, :only => {:primary => true}} do
       run "cd #{current_path} && bundle exec rake db:drop RAILS_ENV=#{rails_env}"
