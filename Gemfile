@@ -72,9 +72,9 @@ end
 ################################################
 group :development do
   gem 'capistrano'
-  gem 'capistrano_colors'
+  #gem 'capistrano_colors'
   gem 'rvm-capistrano'
-  gem 'capistrano-unicorn'
+  #gem 'capistrano-unicorn'
   gem 'net-ssh'
 end
 
@@ -83,7 +83,7 @@ end
 ################################################
 group :staging do
   gem 'unicorn'
-  gem "unicorn-rails"
+  #gem "unicorn-rails"
 end
 
 ################################################
@@ -107,4 +107,5 @@ end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
 
